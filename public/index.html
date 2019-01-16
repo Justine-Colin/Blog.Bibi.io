@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Socket.IO chat</title>
+        <style>
+        </style>
+    </head>
+    <body id="logged-out"> <!--Si pas connecté, le chat est flouté-->
+        <section id="chat">
+            <ul id="messages">  <!--Affichage des messages-->              
+            </ul><ul id="users"> <!--Affichage de la liste des users connectés-->
+            </ul>
+            <form action="">
+                <input id="m" autocomplete="off" />
+                <button>Send</button> <!--Remplissage + envoi message-->
+            </form>
+        </section>
+        <section id="login"> <!--Pour se connecter-->
+            <form action="">
+                <label for="u">Username</label>
+                <input id="u" autocomplete="off" autofocus />
+                <p>           
+                    <button>Login</button>
+                </p>       
+            </form>     
+        </section>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="/socket.io/socket.io.js"></script> <!--Acces à socket.io-->
+        <script src="client.js"></script>
+    </body>
+</html>
